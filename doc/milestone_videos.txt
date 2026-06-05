@@ -1,0 +1,20 @@
+E E 478: VLSI III (Capstone Integrated Digital Design Projects).
+Spring Quarter 2026.
+Department of Electrical and Computer Engineering.
+University of Washington, Seattle. 
+----------------------------------------------------------------
+
+Milestone 1: Project HOLOHorse
+https://youtu.be/lXRQJ1a_btA
+
+Milestone 2: Fortnight Update
+https://youtu.be/vb6xwrX1Zh8
+
+Milestone 3: Basic Chip Design
+https://youtu.be/3hWRYX4qEmg
+
+Milestone 4: The Layout Logs
+https://youtu.be/vIvXlcMowu0
+
+Milestone 5: Welcome to the Threshold
+https://youtu.be/C5vuPfRLL-M

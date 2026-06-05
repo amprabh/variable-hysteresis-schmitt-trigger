@@ -1,0 +1,355 @@
+<?xml version="1.0"?>
+<setupdb version="7">maestro
+	<active>Active Setup
+		<jobcontrolmode>LSCS</jobcontrolmode>
+		<corners>
+			<corner enabled="0">_default</corner>
+			<corner enabled="1">State00
+				<vars>
+					<var>CTL0
+						<value>0</value>
+					</var>
+					<var>CTL1
+						<value>0</value>
+					</var>
+				</vars>
+			</corner>
+			<corner enabled="1">State01
+				<vars>
+					<var>CTL0
+						<value>1.8</value>
+					</var>
+					<var>CTL1
+						<value>0</value>
+					</var>
+				</vars>
+			</corner>
+			<corner enabled="1">State10
+				<vars>
+					<var>CTL0
+						<value>0</value>
+					</var>
+					<var>CTL1
+						<value>1.8</value>
+					</var>
+				</vars>
+			</corner>
+			<corner enabled="1">State11
+				<vars>
+					<var>CTL0
+						<value>1.8</value>
+					</var>
+					<var>CTL1
+						<value>1.8</value>
+					</var>
+				</vars>
+			</corner>
+		</corners>
+		<sharedvarinfo></sharedvarinfo>
+		<overwritehistory>0</overwritehistory>
+		<tests>
+			<test enabled="1">capstone_6T_SCHMITT_TB_1
+				<tool>ADE</tool>
+				<tooloptions>
+					<option>cell
+						<value>schmitt_var_tb</value>
+					</option>
+					<option>lib
+						<value>schmitt_var</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+					<option>state
+						<value>active</value>
+					</option>
+				</tooloptions>
+				<vars>
+					<var>CTL0
+						<value>0</value>
+					</var>
+					<var>CTL1
+						<value>0</value>
+					</var>
+				</vars>
+				<outputs>
+					<output>delay_LH
+						<evalType>point</evalType>
+					</output>
+					<output>delay_HL
+						<evalType>point</evalType>
+					</output>
+					<output>delta_V_center
+						<evalType>point</evalType>
+					</output>
+					<output>target_width
+						<evalType>point</evalType>
+					</output>
+					<output>power
+						<evalType>point</evalType>
+					</output>
+					<output>Hysterisis Error
+						<evalType>point</evalType>
+					</output>
+				</outputs>
+			</test>
+		</tests>
+		<extensions>
+			<extension>Parasitics
+				<callback>_parSetupDBExtensionCB</callback>
+				<iconvalue></iconvalue>
+				<icontype></icontype>
+			</extension>
+		</extensions>
+		<currentmode>Single Run, Sweeps and Corners</currentmode>
+		<checksasserts netlist="0">
+			<test netlist="0" netlistscope="all">capstone_6T_SCHMITT_TB_1</test>
+		</checksasserts>
+		<plottingoptions>
+			<plottingoption>waveformtemplate
+				<value>(None)</value>
+			</plottingoption>
+			<plottingoption>plottingmode
+				<value>Replace</value>
+			</plottingoption>
+			<plottingoption>plottype
+				<value>None</value>
+			</plottingoption>
+			<plottingoption>usewaveformtemplate
+				<value>no</value>
+			</plottingoption>
+			<plottingoption>useMaestroPlottingTemplate
+				<value>yes</value>
+			</plottingoption>
+			<plottingoption>allplottingtemplates
+				<value></value>
+			</plottingoption>
+			<plottingoption>defaultplottingtemplate
+				<value></value>
+			</plottingoption>
+			<plottingoption>distributedplot_enabled
+				<value>no</value>
+			</plottingoption>
+		</plottingoptions>
+		<exploreroptions>
+			<exploreroption>waveformtemplate
+				<value>(None)</value>
+			</exploreroption>
+		</exploreroptions>
+		<incrementalsimsetup>
+			<useincremental>0</useincremental>
+			<reusenetlist>0</reusenetlist>
+			<reusesaverunhist>0</reusesaverunhist>
+			<copyreferenceresults>1</copyreferenceresults>
+		</incrementalsimsetup>
+		<overwritehistoryname>ExplorerRun.0</overwritehistoryname>
+		<specs>
+			<spec>capstone_6T_SCHMITT_TB_1.delta_V_center
+				<testname>capstone_6T_SCHMITT_TB_1</testname>
+				<resname>delta_V_center</resname>
+				<specType>range</specType>
+				<min>0.88</min>
+				<max>0.92</max>
+				<target></target>
+				<tol></tol>
+				<specWeight>60</specWeight>
+			</spec>
+			<spec>capstone_6T_SCHMITT_TB_1.delay_LH
+				<testname>capstone_6T_SCHMITT_TB_1</testname>
+				<resname>delay_LH</resname>
+				<specType>lt</specType>
+				<min></min>
+				<max>100p</max>
+				<target></target>
+				<tol></tol>
+				<specWeight>20</specWeight>
+			</spec>
+			<spec>capstone_6T_SCHMITT_TB_1.delay_HL
+				<testname>capstone_6T_SCHMITT_TB_1</testname>
+				<resname>delay_HL</resname>
+				<specType>lt</specType>
+				<min></min>
+				<max>100p</max>
+				<target></target>
+				<tol></tol>
+				<specWeight>20</specWeight>
+			</spec>
+			<spec>capstone_6T_SCHMITT_TB_1.power
+				<testname>capstone_6T_SCHMITT_TB_1</testname>
+				<resname>power</resname>
+				<specType>min</specType>
+				<min>50u</min>
+				<max></max>
+				<target></target>
+				<tol></tol>
+				<specWeight>10</specWeight>
+			</spec>
+			<spec>capstone_6T_SCHMITT_TB_1.Hysterisis Error
+				<testname>capstone_6T_SCHMITT_TB_1</testname>
+				<resname>Hysterisis Error</resname>
+				<specType>lt</specType>
+				<min></min>
+				<max>.01</max>
+				<target></target>
+				<tol></tol>
+				<specWeight>100</specWeight>
+			</spec>
+		</specs>
+		<runoptions>
+			<mode>Local Optimization
+				<runoption>effort
+					<value>hookeJeeves</value>
+				</runoption>
+				<runoption>lazy
+					<value>0</value>
+				</runoption>
+				<runoption>tillsatisfied
+					<value>1</value>
+				</runoption>
+				<runoption>startingstateorpoint
+					<value>Starting State</value>
+				</runoption>
+				<runoption>startingstatename
+					<value>automaticStartingPoint</value>
+				</runoption>
+				<runoption>timelimit
+					<value></value>
+				</runoption>
+				<runoption>numpoints
+					<value></value>
+				</runoption>
+			</mode>
+		</runoptions>
+		<incrementalsimulationoptions>
+			<incrementalSimulation>0</incrementalSimulation>
+			<checkassembler>1</checkassembler>
+			<checkdesign>0</checkdesign>
+			<checksimulationfiles>0</checksimulationfiles>
+		</incrementalsimulationoptions>
+		<vars>
+			<var enabled="1">ratio_fb
+				<value>0</value>
+				<dependentTests>
+					<dependentTest enabled="1">capstone_6T_SCHMITT_TB_1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>ratio_in
+				<value>0</value>
+			</var>
+			<var enabled="1">PW
+				<value>16.3u</value>
+				<dependentTests>
+					<dependentTest enabled="1">capstone_6T_SCHMITT_TB_1</dependentTest>
+				</dependentTests>
+			</var>
+			<var enabled="1">PW_FB
+				<value>550n</value>
+				<dependentTests>
+					<dependentTest enabled="1">capstone_6T_SCHMITT_TB_1</dependentTest>
+				</dependentTests>
+			</var>
+			<var enabled="1">NW
+				<value>6.8u</value>
+				<dependentTests>
+					<dependentTest enabled="1">capstone_6T_SCHMITT_TB_1</dependentTest>
+				</dependentTests>
+			</var>
+			<var enabled="1">NW_FB
+				<value>420n</value>
+				<dependentTests>
+					<dependentTest enabled="1">capstone_6T_SCHMITT_TB_1</dependentTest>
+				</dependentTests>
+			</var>
+			<var enabled="1">VDC
+				<value>1.8</value>
+				<dependentTests>
+					<dependentTest enabled="1">capstone_6T_SCHMITT_TB_1</dependentTest>
+				</dependentTests>
+			</var>
+			<var enabled="1">CTL0
+				<value>0</value>
+				<dependentTests>
+					<dependentTest enabled="1">capstone_6T_SCHMITT_TB_1</dependentTest>
+				</dependentTests>
+			</var>
+			<var enabled="1">CTL1
+				<value>0</value>
+				<dependentTests>
+					<dependentTest enabled="1">capstone_6T_SCHMITT_TB_1</dependentTest>
+				</dependentTests>
+			</var>
+		</vars>
+		<jobpolicyname>Maestro Default</jobpolicyname>
+		<netlistjobpolicyname>Netlisting Default</netlistjobpolicyname>
+		<distributeoptions>
+			<genusjoblimits>
+				<genusjoblimit>ICRP
+					<value>0</value>
+				</genusjoblimit>
+			</genusjoblimits>
+			<parallelrun>1</parallelrun>
+		</distributeoptions>
+		<parameters>
+			<location>capstone/6T_SCHMITT_VAR/schematic/NM_SwitchA
+				<parameter enabled="0">w
+					<value>1u</value>
+					<promptname>Total Width</promptname>
+				</parameter>
+			</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/NM_SwitchB
+				<parameter enabled="0">w
+					<value>1u</value>
+					<promptname>Total Width</promptname>
+				</parameter>
+			</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/PM_BranchA
+				<parameter enabled="0">w
+					<value>1u</value>
+					<promptname>Total Width</promptname>
+				</parameter>
+			</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/PM_BranchB
+				<parameter enabled="0">w
+					<value>1u</value>
+					<promptname>Total Width</promptname>
+				</parameter>
+			</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/NM_BranchA
+				<parameter enabled="0">w
+					<value>1u</value>
+					<promptname>Total Width</promptname>
+				</parameter>
+			</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/NM7</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/PM_SwitchA
+				<parameter enabled="0">w
+					<value>1u</value>
+					<promptname>Total Width</promptname>
+				</parameter>
+			</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/PM6</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/PSwitchW_B</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/NM_BranchB
+				<parameter enabled="0">w
+					<value>1u</value>
+					<promptname>Total Width</promptname>
+				</parameter>
+			</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/PM_SwitchB
+				<parameter enabled="0">w
+					<value>1u</value>
+					<promptname>Total Width</promptname>
+				</parameter>
+			</location>
+		</parameters>
+		<allparametersdisabled>1</allparametersdisabled>
+	</active>
+	<history>History
+	</history>
+</setupdb>

@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<setupdb version="6">automaticStartingPoint
+	<active>Active Setup
+		<vars>
+			<var enabled="1">ratio_fb
+				<value>0</value>
+				<dependentTests>
+					<dependentTest omitted="0">capstone_6T_SCHMITT_TB_1</dependentTest>
+				</dependentTests>
+			</var>
+			<var>ratio_in
+				<value>0</value>
+			</var>
+			<var enabled="1">PW
+				<value>20.3u</value>
+				<dependentTests>
+					<dependentTest omitted="0">capstone_6T_SCHMITT_TB_1</dependentTest>
+				</dependentTests>
+			</var>
+			<var enabled="1">PW_FB
+				<value>550n</value>
+				<dependentTests>
+					<dependentTest omitted="0">capstone_6T_SCHMITT_TB_1</dependentTest>
+				</dependentTests>
+			</var>
+			<var enabled="1">NW
+				<value>10.2u</value>
+				<dependentTests>
+					<dependentTest omitted="0">capstone_6T_SCHMITT_TB_1</dependentTest>
+				</dependentTests>
+			</var>
+			<var enabled="1">NW_FB
+				<value>420n</value>
+				<dependentTests>
+					<dependentTest omitted="0">capstone_6T_SCHMITT_TB_1</dependentTest>
+				</dependentTests>
+			</var>
+			<var enabled="1">VDC
+				<value>1.8</value>
+				<dependentTests>
+					<dependentTest omitted="0">capstone_6T_SCHMITT_TB_1</dependentTest>
+				</dependentTests>
+			</var>
+			<var enabled="1">CTL0
+				<value>0</value>
+				<dependentTests>
+					<dependentTest omitted="0">capstone_6T_SCHMITT_TB_1</dependentTest>
+				</dependentTests>
+			</var>
+			<var enabled="1">CTL1
+				<value>0</value>
+				<dependentTests>
+					<dependentTest omitted="0">capstone_6T_SCHMITT_TB_1</dependentTest>
+				</dependentTests>
+			</var>
+		</vars>
+		<parameters>
+			<location>capstone/6T_SCHMITT_VAR/schematic/NM_SwitchA
+				<parameter enabled="1">w
+					<value>3 * PM_BranchA/w@capstone/6T_SCHMITT_VAR/schematic</value>
+					<promptname>Total Width</promptname>
+				</parameter>
+			</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/NM_SwitchB
+				<parameter enabled="1">w
+					<value>3 * PM_BranchB/w@capstone/6T_SCHMITT_VAR/schematic</value>
+					<promptname>Total Width</promptname>
+				</parameter>
+			</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/PM_BranchA
+				<parameter enabled="1">w
+					<value>1u</value>
+					<promptname>Total Width</promptname>
+				</parameter>
+			</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/PM_BranchB
+				<parameter enabled="1">w
+					<value>2 * PM_BranchA/w@capstone/6T_SCHMITT_VAR/schematic</value>
+					<promptname>Total Width</promptname>
+				</parameter>
+			</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/NM_BranchA
+				<parameter enabled="1">w
+					<value>1u</value>
+					<promptname>Total Width</promptname>
+				</parameter>
+			</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/NM7</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/PM_SwitchA
+				<parameter enabled="1">w
+					<value>3 * NM_BranchA/w@capstone/6T_SCHMITT_VAR/schematic</value>
+					<promptname>Total Width</promptname>
+				</parameter>
+			</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/PM6</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/PSwitchW_B</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/NM_BranchB
+				<parameter enabled="1">w
+					<value>2 * NM_BranchA/w@capstone/6T_SCHMITT_VAR/schematic</value>
+					<promptname>Total Width</promptname>
+				</parameter>
+			</location>
+			<location>capstone/6T_SCHMITT_VAR/schematic/PM_SwitchB
+				<parameter enabled="1">w
+					<value>3 * NM_BranchB/w@capstone/6T_SCHMITT_VAR/schematic</value>
+					<promptname>Total Width</promptname>
+				</parameter>
+			</location>
+		</parameters>
+	</active>
+	<history>History</history>
+</setupdb>

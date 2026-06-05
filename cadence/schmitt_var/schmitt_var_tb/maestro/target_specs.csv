@@ -1,0 +1,12 @@
+Name,Type,Output,EvalType,Plot,Save,Weight,Spec
+Vout,net,/OUT,point,t,t,,
+Vin,net,/IN,point,t,t,,
+V_LH,expr,cross(VS("/OUT") 0.9 1 "falling" nil nil nil),point,,,,
+V_HL,expr,cross(VS("/OUT") 0.9 1 "rising" nil nil nil),point,,,,
+target_width,expr,if((VAR("CTL0") > 0.9) then if((VAR("CTL1") > 0.9) then 0.396 else 0.288) else if((VAR("CTL1") > 0.9) then 0.36 else 0.144)),point,t,,,
+delta_V_trip,expr,abs((V_LH - V_HL)),point,t,,,
+delta_V_center,expr,((V_LH + V_HL) / 2),point,t,,60,range 0.88 0.92
+delay_LH,expr,delay(VT("/IN") 0.9 1 "rising" VT("/OUT") 0.9 1 "falling"),point,t,,20,< 100p
+delay_HL,expr,delay(VT("/IN") 0.9 1 "falling" VT("/OUT") 0.9 1 "rising"),point,t,,20,< 100p
+power,expr,abs(average((i("/V1/PLUS" ?result "tran") * 1.8))),point,t,,10,minimize 50u
+Hysterisis Error,expr,abs((delta_V_trip - target_width)),point,t,,100,< .01

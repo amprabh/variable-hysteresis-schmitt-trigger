@@ -1,0 +1,86 @@
+library (schmitt_var) {
+    /* Don't define all the string values because blackbox */
+    delay_model : "table_lookup";
+    bus_naming_style : "%s[%d]";
+    time_unit : "1ns";
+    voltage_unit : "1V";
+    leakage_power_unit : "1nW";
+    current_unit : "1mA";
+    pulling_resistance_unit : "1kohm";
+    capacitive_load_unit(1.0000000000, "pf");
+    revision : 1.0000000000;
+    default_cell_leakage_power : 0.0000000000;
+    default_fanout_load : 0.0000000000;
+    default_inout_pin_cap : 0.0000000000;
+    default_input_pin_cap : 0.0000000000;
+    default_max_transition : 1.5000000000;
+    default_output_pin_cap : 0.0000000000;
+    default_arc_mode : "worst_edges";
+    default_constraint_arc_mode : "worst";
+    default_leakage_power_density : 0.0000000000;
+    default_operating_conditions : "tt_025C_1v80";
+    operating_conditions ("tt_025C_1v80") {
+        voltage : 1.8000000000;
+        process : 1.0000000000;
+        temperature : 25.000000000;
+        tree_type : "balanced_tree";
+    }
+
+    cell (schmitt_var) {
+        area : 798.5443;
+        cell_footprint : "schmitt_var";
+
+	pg_pin ("vdd!") {
+		pg_type : primary_power;
+		voltage_name : "vdd!";
+	}
+
+	pg_pin ("gnd!") {
+		pg_type : primary_ground;
+		voltage_name : "gnd!";
+	}
+
+        pin (vin) {
+            direction : input;
+            capacitance : 0.075;
+            related_power_pin : "vdd!";
+            related_ground_pin : "gnd!";
+        }
+
+        pin (CTL0) {
+            direction : input;
+            capacitance : 0.013;
+            related_power_pin : "vdd!";
+            related_ground_pin : "gnd!";
+        }
+
+        pin (CTL1) {
+            direction : input;
+            capacitance : 0.031;
+            related_power_pin : "vdd!";
+            related_ground_pin : "gnd!";
+        }
+
+        pin (CTL0_BAR) {
+            direction : input;
+            capacitance : 0.025;
+            related_power_pin : "vdd!";
+            related_ground_pin : "gnd!";
+        }
+
+        pin (CTL1_BAR) {
+            direction : input;
+            capacitance : 0.062;
+            related_power_pin : "vdd!";
+            related_ground_pin : "gnd!";
+        }
+
+        pin (vout) {
+            direction : output;
+            function : "vin";
+            capacitance : 0.008;
+            related_power_pin : "vdd!";
+            related_ground_pin : "gnd!";
+        }
+    }
+}

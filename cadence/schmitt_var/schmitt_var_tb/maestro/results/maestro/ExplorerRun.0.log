@@ -1,0 +1,46 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Thu Jun  4 15:15:18 2026 
+Best design point: 1
+Design specs: 
+	capstone_6T_SCHMITT_TB_1	corner	State00 - 
+	target_width		144m
+	delta_V_trip		143.7m
+	delta_V_center		918.1m	Yes
+	delay_LH		57.79p	Yes
+	delay_HL		71.33p	Yes
+	power		28.82u	Yes
+	Hysterisis Error		309.3u	Yes
+	capstone_6T_SCHMITT_TB_1	corner	State01 - 
+	target_width		288m
+	delta_V_trip		287.9m
+	delta_V_center		846.1m	Near
+	delay_LH		57.87p	Yes
+	delay_HL		72.92p	Yes
+	power		29.96u	Yes
+	Hysterisis Error		117u	Yes
+	capstone_6T_SCHMITT_TB_1	corner	State10 - 
+	target_width		360m
+	delta_V_trip		359.9m
+	delta_V_center		810m	Near
+	delay_LH		58.05p	Yes
+	delay_HL		74.55p	Yes
+	power		30.92u	Yes
+	Hysterisis Error		107.2u	Yes
+	capstone_6T_SCHMITT_TB_1	corner	State11 - 
+	target_width		396m
+	delta_V_trip		395.6m
+	delta_V_center		792.2m	Near
+	delay_LH		58.14p	Yes
+	delay_HL		75.25p	Yes
+	power		31.35u	Yes
+	Hysterisis Error		410.7u	Yes
+Design parameters: 
+	CTL0		0
+	CTL1		0
+
+ExplorerRun.0
+Number of points completed: 1
+Number of simulation errors: 0
+ExplorerRun.0 completed. 
+Current time: Thu Jun  4 15:17:18 2026 

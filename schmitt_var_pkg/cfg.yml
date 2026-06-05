@@ -1,0 +1,69 @@
+# List of all Verilog source files to include in this build
+synthesis.inputs.input_files:
+  - "schmitt_var.v"
+  - "top_schmitt_var.v"
+
+# Set top level for synthesis
+synthesis.inputs.top_module: "top_schmitt_var"
+
+# List of all SPICE source files to include in this build
+vlsi.inputs.spice_blocks:
+  - "${SCHMITT_VAR_PKG}/schmitt_var.sp"
+
+# Custom Macro Integration
+# Define schmitt_var as hard macro so Genus and Innovus don't treat it as a blackbox
+vlsi.technology.extra_libraries:
+  - library:
+      name: "schmitt_var"
+      nldm_lib_file: "${SCHMITT_VAR_PKG}/schmitt_var.lib" # timing  
+      lef_file: "${SCHMITT_VAR_PKG}/schmitt_var.lef"      # physical
+      verilog_sim: "${SCHMITT_VAR_PKG}/schmitt_var.v"     # simulation
+      provides:
+        - lib_type: "macro"
+vlsi.technology.extra_libraries_meta: "append"
+
+# Provide clock constraint to avoid defaulting to 0ns clock period
+# Absolute Maximum Theoretical Frequency: 1 / 0.260 ns = 3.84 GHz
+# Set at 1ns period (1 GHz) with delays set to half-period (0.5ns)
+vlsi.inputs.clocks:
+  - name: "clk"
+    period: "1ns"
+    uncertainty: "0.1ns"
+# Standard I/O pins
+vlsi.inputs.delays:
+  - name: "analog_in"
+    clock: "clk"
+    direction: "input"
+    delay: "0.5ns"
+  - name: "mode_select"
+    clock: "clk"
+    direction: "input"
+    delay: "0.5ns"
+  - name: "digital_out"
+    clock: "clk"
+    direction: "output"
+    delay: "0.5ns"
+  - name: "test_inv"
+    clock: "clk"
+    direction: "output"
+    delay: "0.5ns"
+  - name: "test_clock_tree"
+    clock: "clk"
+    direction: "output"
+    delay: "0.5ns"
+
+# Placement Constraints
+vlsi.inputs.placement_constraints:
+  - path: "TOP" 
+    type: toplevel
+    width:  120
+    height: 120
+    x: 0
+    y: 0
+    margins: {left: 0, right: 0, top: 0, bottom: 0}
+  - path: "top_schmitt_var/top_schmitt"
+    type: hardmacro
+    x: 70
+    y: 11.5
+    orientation: r0
+
